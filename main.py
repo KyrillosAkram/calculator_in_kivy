@@ -11,6 +11,15 @@ class lay(BoxLayout):
         super(lay,self).__init__(**kwarg)
         self.data=[{'text':str(x)} for x in range(30)]'''
     theinput=ObjectProperty()
+
+    def calculate(self,calculation):
+        try:
+            print(calculation)
+            return eval(calculation)
+
+        except:
+            return 'Error'
+
 #    def woof(self):
 #        playsound("Dog-Woof-SoundBible.com-457935112.mp3")
 #        print("woof !!\n")
